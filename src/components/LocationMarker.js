@@ -1,13 +1,14 @@
-import { Icon } from '@iconify/react';
-import fire from '@iconify/icons-mdi/fire-alert';
+import IconMapper from './IconMapper';
 
 
-export const LocationMarker = ({ lat, lng, onClick }) => {
+
+export const LocationMarker = ({ lat, lng, onClick,disaster }) => {
   return (
     <div className='location-marker' onClick={onClick}>
-      <Icon icon={fire} className='location-icon' />
+      <IconMapper disaster = {disaster} />
     </div>
   );
 };
 
 export default LocationMarker;
+
