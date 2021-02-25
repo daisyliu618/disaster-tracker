@@ -1,7 +1,8 @@
-import { useState } from "react";
-import GoogleMapReact from "google-map-react";
-import LocationMarker from "./LocationMarker";
-import LocationInfoBox from "./LocationInfoBox";
+import { useState } from 'react';
+import GoogleMapReact from 'google-map-react';
+import LocationMarker from './LocationMarker';
+import LocationInfoBox from './LocationInfoBox';
+
 
 const Map = ({ eventData, center, zoom }) => {
   const [locationInfo, setLocationInfo] = useState(null);
@@ -13,12 +14,12 @@ const Map = ({ eventData, center, zoom }) => {
     return (
       <LocationMarker
         lat={
-          typeof ev.geometry[0].coordinates[1] === "number"
+          typeof ev.geometry[0].coordinates[1] === 'number'
             ? ev.geometry[0].coordinates[1]
             : 10
         }
         lng={
-          typeof ev.geometry[0].coordinates[0] === "number"
+          typeof ev.geometry[0].coordinates[0] === 'number'
             ? ev.geometry[0].coordinates[0]
             : 10
         }
@@ -35,7 +36,7 @@ const Map = ({ eventData, center, zoom }) => {
   });
 
   return (
-    <div className="map">
+    <div className='map'>
       <GoogleMapReact
         bootstrapURLKeys={{ key: 'AIzaSyCcNATbXP2DOmRBl_JS30AcjMiq1RTtaV0' }}
         defaultCenter={center}
@@ -43,7 +44,8 @@ const Map = ({ eventData, center, zoom }) => {
       >
         {markers}
       </GoogleMapReact>
-      {locationInfo && <LocationInfoBox info={locationInfo} />}
+        {locationInfo ? <LocationInfoBox info={locationInfo} />: null}
+
     </div>
   );
 };

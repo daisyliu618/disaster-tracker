@@ -12,7 +12,8 @@ export const IconMapper = ({ disaster }) => {
     severeStorms: weatherWindy,
   };
 
-  return <Icon icon={disasters[disaster]} className="location-icon" />;
+  return <Icon icon={disasters[disaster]} className={disaster} 
+  />;
 };
 
 export default IconMapper;

@@ -28,10 +28,32 @@ body {
   position: relative;
 }
 
-.location-icon {
+/* .location-icon {
+  font-size: 2rem;
+  color: red;
+} */
+
+.wildfires {
   font-size: 2rem;
   color: red;
 }
+
+.volcanoes {
+  font-size: 2rem;
+  color: rgb(236, 71, 11);
+}
+
+.seaLakeIce {
+  font-size: 2rem;
+  color: rgb(25, 201, 255);
+}
+
+.severeStorms {
+  font-size: 2rem;
+  color: rgb(107, 107, 107);
+}
+
+
 
 .location-info {
   position: absolute;
@@ -53,4 +75,13 @@ body {
 
 .location-info li {
   padding: 5px 0;
+}
+
+@media screen and (max-width: 480px) {
+  .location-info {
+    width: 200px;
+    min-height: 100px;
+    padding: 10px;
+  }
+
 }
